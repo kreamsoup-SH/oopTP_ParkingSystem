@@ -29,11 +29,13 @@ namespace WinFormsApp4
         }
         public void SubCar(int index, int nowparking)
         {
-            for(int i=index; i < nowparking-1; i++)
+            for(int i=index; i < nowparking; i++)
             {
                 car_num[i] = car_num[i + 1];
                 in_time[i] = in_time[i + 1];
             }
+            car_num[nowparking] = "";
+            in_time[nowparking] = "";
         }
         public bool IsThereSpace(int position)
         {
